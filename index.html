@@ -11,6 +11,36 @@
           background-color 0.2s,
           color 0.2s;
       }
+      /* glass-nav — preserved exactly as you had, but we keep border-radius:5px on links */
+      .glass-nav {
+        background: rgba(17, 24, 39, 0.55);
+        backdrop-filter: blur(12px) saturate(180%);
+        -webkit-backdrop-filter: blur(12px) saturate(180%);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+      }
+      .glass-nav a {
+        color: #e5e7eb;
+        font-weight: 500;
+        transition: all 0.15s ease;
+        padding: 0.4rem 0.9rem;
+        border-radius: 5px; /* your requested 5px */
+        background: transparent;
+        text-decoration: none;
+      }
+      .glass-nav a:hover {
+        background: rgba(255, 255, 255, 0.08);
+        color: #f3f4f6;
+      }
+      .glass-nav a.active {
+        background: rgba(96, 165, 250, 0.15);
+        color: #93bbfc;
+        box-shadow: 0 0 0 1px rgba(96, 165, 250, 0.2);
+      }
+      .brand-icon {
+        filter: drop-shadow(0 0 6px rgba(96, 165, 250, 0.3));
+      }
+      /* rest of the page styles (preserved) */
       .table-wrap table {
         border-collapse: collapse;
         width: 100%;
@@ -94,10 +124,27 @@
       .border-t {
         border-top-color: #374151 !important;
       }
+
+      /* small extra: responsive tweaks for the nav */
+      @media (max-width: 480px) {
+        .glass-nav a {
+          padding: 0.3rem 0.6rem;
+          font-size: 0.8rem;
+        }
+      }
     </style>
   </head>
   <body class="bg-gray-900 text-gray-200 font-sans antialiased">
-    <div class="max-w-4xl mx-auto px-4 py-6 md:py-10">
+    <!-- ========== GLASS NAVBAR (your version, enhanced with more items & responsive) ========== -->
+    <nav
+      class="glass-nav w-full max-w-3xl mx-auto mt-4 px-2 py-2 rounded-lg flex items-center justify-center gap-0.5 flex-wrap"
+    >
+      <a href="/" class="active text-sm md:text-base">🏠 Guide</a>
+      <a href="roles.html" class="text-sm md:text-base">📋 Roles</a>
+    </nav>
+
+    <!-- main content (exactly as provided, with minor spacing adjustment) -->
+    <div class="max-w-4xl mx-auto px-4 py-4 md:py-8">
       <!-- 👋 Start Here -->
       <h1 class="text-3xl font-extrabold mb-2 flex items-center gap-2">
         👋 Start Here

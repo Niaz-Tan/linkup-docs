@@ -1,0 +1,364 @@
+<!doctype html>
+<html lang="en" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LinkUp · roles</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      body {
+        transition:
+          background-color 0.2s,
+          color 0.2s;
+      }
+      .glass-nav {
+        background: rgba(17, 24, 39, 0.55);
+        backdrop-filter: blur(12px) saturate(180%);
+        -webkit-backdrop-filter: blur(12px) saturate(180%);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+      }
+      .glass-nav a {
+        color: #e5e7eb;
+        font-weight: 500;
+        transition: all 0.15s ease;
+        padding: 0.4rem 0.9rem;
+        border-radius: 5px;
+        background: transparent;
+        text-decoration: none;
+      }
+      .glass-nav a:hover {
+        background: rgba(255, 255, 255, 0.08);
+        color: #f3f4f6;
+      }
+      .glass-nav a.active {
+        background: rgba(96, 165, 250, 0.15);
+        color: #93bbfc;
+        box-shadow: 0 0 0 1px rgba(96, 165, 250, 0.2);
+      }
+      .table-wrap table {
+        border-collapse: collapse;
+        width: 100%;
+      }
+      .table-wrap th,
+      .table-wrap td {
+        border: 1px solid #374151;
+        padding: 0.6rem 0.8rem;
+        text-align: left;
+        vertical-align: top;
+      }
+      .table-wrap th {
+        background-color: #1f2937;
+        font-weight: 600;
+      }
+      .section-title {
+        font-weight: 700;
+        font-size: 1.5rem;
+        letter-spacing: -0.02em;
+        border-bottom: 2px solid #374151;
+        padding-bottom: 0.5rem;
+        margin-bottom: 1.25rem;
+      }
+      .badge {
+        display: inline-block;
+        background: #374151;
+        color: #e5e7eb;
+        padding: 0.1rem 0.6rem;
+        border-radius: 9999px;
+        font-size: 0.7rem;
+        font-weight: 500;
+        letter-spacing: 0.01em;
+      }
+      .link {
+        color: #60a5fa;
+        text-decoration: underline;
+        text-underline-offset: 2px;
+      }
+      code {
+        background: #374151;
+        padding: 0.1rem 0.4rem;
+        border-radius: 0.25rem;
+        font-size: 0.8rem;
+      }
+      @media (max-width: 480px) {
+        .glass-nav a {
+          padding: 0.3rem 0.6rem;
+          font-size: 0.8rem;
+        }
+      }
+    </style>
+  </head>
+  <body class="bg-gray-900 text-gray-200 font-sans antialiased">
+    <nav
+      class="glass-nav w-full max-w-3xl mx-auto mt-4 px-2 py-2 rounded-lg flex items-center justify-center gap-0.5 flex-wrap"
+    >
+      <a href="/" class="text-sm md:text-base">🏠 Guide</a>
+      <a href="/roles" class="active text-sm md:text-base">📋 Roles</a>
+    </nav>
+
+    <div class="max-w-4xl mx-auto px-4 py-6 md:py-10">
+      <div class="mb-6">
+        <h1 class="text-3xl font-extrabold flex items-center gap-2">
+          📋 Roles
+        </h1>
+        <p class="text-gray-400 mt-1 text-sm">
+          All roles in the server fall into one of four categories. Each
+          category serves a different purpose, whether it's tracking your study
+          progress, showing when you joined, identifying your community, or
+          helping manage the server.
+        </p>
+      </div>
+
+      <h2 class="section-title mt-8">📈 Ranking Roles</h2>
+      <div
+        class="table-wrap overflow-x-auto my-4 rounded-lg border border-gray-700"
+      >
+        <table class="min-w-full text-sm">
+          <thead>
+            <tr>
+              <th>Role</th>
+              <th>Explanation</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>🌱 Member</td>
+              <td>
+                The starting rank for every member. Earn more study hours to
+                climb the leaderboard.
+              </td>
+            </tr>
+            <tr>
+              <td>🥉 Bronze I</td>
+              <td>
+                Awarded after reaching 5 study hours. Your study journey
+                officially begins here.
+              </td>
+            </tr>
+            <tr>
+              <td>🥉 Bronze II</td>
+              <td>
+                Earned between 15–30 study hours, showing growing consistency.
+              </td>
+            </tr>
+            <tr>
+              <td>🥉 Bronze III</td>
+              <td>Given to members with 30–50 study hours.</td>
+            </tr>
+            <tr>
+              <td>🥈 Silver I</td>
+              <td>
+                Awarded after reaching 50 study hours. A sign of regular
+                dedication.
+              </td>
+            </tr>
+            <tr>
+              <td>🥈 Silver II</td>
+              <td>Earned between 70–95 study hours.</td>
+            </tr>
+            <tr>
+              <td>🥈 Silver III</td>
+              <td>Given to members with 95–125 study hours.</td>
+            </tr>
+            <tr>
+              <td>🥇 Gold I</td>
+              <td>Awarded after reaching 125 study hours.</td>
+            </tr>
+            <tr>
+              <td>🥇 Gold II</td>
+              <td>Earned between 160–200 study hours.</td>
+            </tr>
+            <tr>
+              <td>🥇 Gold III</td>
+              <td>Given to members with 200–250 study hours.</td>
+            </tr>
+            <tr>
+              <td>💠 Platinum I</td>
+              <td>Awarded after reaching 250 study hours.</td>
+            </tr>
+            <tr>
+              <td>💠 Platinum II</td>
+              <td>Earned between 300–360 study hours.</td>
+            </tr>
+            <tr>
+              <td>💠 Platinum III</td>
+              <td>Given to members with 360–420 study hours.</td>
+            </tr>
+            <tr>
+              <td>💎 Diamond I</td>
+              <td>Awarded after reaching 420 study hours.</td>
+            </tr>
+            <tr>
+              <td>💎 Diamond II</td>
+              <td>Earned between 480–540 study hours.</td>
+            </tr>
+            <tr>
+              <td>💎 Diamond III</td>
+              <td>Given to members with 540–600 study hours.</td>
+            </tr>
+            <tr>
+              <td>👑 VIP — Celestial Scholar</td>
+              <td>
+                The highest study rank, awarded to members with 600+ study
+                hours. Represents exceptional consistency and dedication.
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div
+        class="bg-gray-800/40 border-l-4 border-blue-400 p-3 rounded-r-lg text-sm text-gray-300"
+      >
+        <span class="font-medium">📌 Note:</span> Ranking roles are based on
+        study hours earned during the current season and are reset at the
+        beginning of every new season.
+      </div>
+
+      <h2 class="section-title mt-10">🏆 Season Roles</h2>
+      <div
+        class="table-wrap overflow-x-auto my-4 rounded-lg border border-gray-700"
+      >
+        <table class="min-w-full text-sm">
+          <thead>
+            <tr>
+              <th>Role</th>
+              <th>Explanation</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>🌱 Pre-Season</td>
+              <td>
+                Joined the community before the official launch of Season 1.
+                These members helped shape the server during its early days.
+              </td>
+            </tr>
+            <tr>
+              <td>🏆 Season 1</td>
+              <td>Joined during the first official season.</td>
+            </tr>
+            <tr>
+              <td>🏆 Season 2</td>
+              <td>Joined during the second official season.</td>
+            </tr>
+            <tr>
+              <td>🏆 Season 3</td>
+              <td>Joined during the third official season.</td>
+            </tr>
+            <tr>
+              <td>🏆 Future Seasons</td>
+              <td>
+                New season roles will be introduced every six months as the
+                community grows.
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div
+        class="bg-gray-800/40 border-l-4 border-green-400 p-3 rounded-r-lg text-sm text-gray-300"
+      >
+        <span class="font-medium">📌 Note:</span> Season roles are permanent and
+        never reset. They simply show when you first joined the community.
+      </div>
+
+      <h2 class="section-title mt-10">🛡️ Management Roles</h2>
+      <div
+        class="table-wrap overflow-x-auto my-4 rounded-lg border border-gray-700"
+      >
+        <table class="min-w-full text-sm">
+          <thead>
+            <tr>
+              <th>Role</th>
+              <th>Explanation</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>👑 Owner</td>
+              <td>
+                The creator and primary manager of the server. Responsible for
+                the overall vision, development, and major decisions.
+              </td>
+            </tr>
+            <tr>
+              <td>🛠️ Admin</td>
+              <td>
+                Helps manage the server, configure systems, organize events, and
+                oversee moderation.
+              </td>
+            </tr>
+            <tr>
+              <td>🛡️ Moderator</td>
+              <td>
+                Maintains a safe and welcoming environment by enforcing rules
+                and assisting members.
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h2 class="section-title mt-10">🌍 Community Roles</h2>
+      <div
+        class="table-wrap overflow-x-auto my-4 rounded-lg border border-gray-700"
+      >
+        <table class="min-w-full text-sm">
+          <thead>
+            <tr>
+              <th>Role</th>
+              <th>Explanation</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>🗣️ Linguistic</td>
+              <td>
+                Indicates the languages a member can communicate in, making it
+                easier to find people who speak the same language.
+              </td>
+            </tr>
+            <tr>
+              <td>🎓 From IIUC</td>
+              <td>
+                Identifies members who study at the International Islamic
+                University Chittagong (IIUC).
+              </td>
+            </tr>
+            <tr>
+              <td>🎓 From BRAC</td>
+              <td>Identifies members who study at BRAC University.</td>
+            </tr>
+            <tr>
+              <td>➕ More Community Roles</td>
+              <td>
+                Additional university, language, and community roles will be
+                added as the server continues to grow.
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <footer
+        class="mt-16 border-t border-zinc-800 pt-8 text-center text-sm text-zinc-500"
+      >
+        <p>
+          © 2026 <span class="font-medium text-zinc-300">LinkUp</span>. All
+          rights reserved.
+        </p>
+        <p class="mt-1">Built for the LinkUp community.</p>
+        <p class="mt-3">
+          Questions?
+          <a
+            href="https://discord.com/users/1446926539949080727"
+            target="_blank"
+            class="font-medium text-indigo-400 hover:text-indigo-300 transition-colors"
+          >
+            @niazdev
+          </a>
+        </p>
+      </footer>
+    </div>
+  </body>
+</html>
